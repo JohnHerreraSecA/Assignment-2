@@ -1,0 +1,147 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1 {
+    text-align: center;
+    color: rgb(209, 159, 33);
+    text-shadow: 2px 2px 4px #000;
+}
+
+  body {
+    background-image: url('https://miro.medium.com/v2/resize:fit:1400/1*94jnsyVYzDL7Vuv2589BpA.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Center and style the navigation bar */
+.navbar {
+    background-color: #333;
+    color: rgb(209, 159, 33);
+    font-size: large;
+    position: fixed;
+    top: 70px; /* Adjust the top position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-list li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar .nav-list li a {
+    text-decoration: none;
+    color: rgb(209, 159, 33);
+    padding: 5px 10px;
+}
+
+.navbar .nav-list li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+ /* Keyframes for drop-down effect */
+@keyframes dropDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+/* Styling for section */
+section {
+    text-align: center;
+    max-width: 1175px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: dropDown 1s ease-out; /* Applying animation */
+}
+
+section p {
+    line-height: 1.6;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.448); /* Enhanced shadow on hover */
+}
+  
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .image-gallery img {
+    width: 150px; /* Set a fixed width for the images */
+    height: auto; /* Maintain aspect ratio */
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s;
+    animation: dropDown 4s ease-out; /* Applying animation */
+  }
+  
+  .image-gallery img:nth-child(odd) {
+    transform: rotate(30deg);
+  }
+  
+  .image-gallery img:nth-child(even) {
+    transform: rotate(-30deg);
+  }
+  
+  .image-gallery img:hover {
+    transform: scale(1.1);
+  }
+
+  footer {
+    text-align: center;
+    color: rgb(209, 159, 33);
+    margin-top: auto; /* Pushes the footer to the bottom */
+  }
+
+  @media (max-width: 1280px) {
+    body {
+        color: rgb(30, 168, 172);
+
+    }
+  }
+
+  body {
+      color: rgb(189, 45, 101);
+  }
